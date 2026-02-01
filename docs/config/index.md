@@ -1,147 +1,111 @@
----
-title: Configuring Vite
----
+import React from "react";
 
-# Configuring Vite
+export default function Portfolio() {
+  return (
+    <main className="max-w-4xl mx-auto px-6 py-10 font-sans text-gray-900">
+      <header className="text-center border-b pb-6">
+        <h1 className="text-3xl font-bold">Balak Das Agarwal</h1>
+        <p className="mt-2">MBA (Marketing) | Brand & Digital Marketing</p>
+        <p className="text-sm mt-1">Kolkata, India | 7980268034 | balakdasagarwal2001@gmail.com</p>
+      </header>
 
-When running `vite` from the command line, Vite will automatically try to resolve a config file named `vite.config.js` inside [project root](/guide/#index-html-and-project-root) (other JS and TS extensions are also supported).
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold border-b pb-1">About Me</h2>
+        <p className="mt-3">
+          MBA Marketing professional with hands-on experience in brand marketing, digital campaigns,
+          and market research across FMCG and digital-first environments. Experienced in brand
+          visibility analysis, content strategy, consumer insights, and performance tracking through
+          internships at Emami Ltd. (Navratna) and Anantex.
+        </p>
+      </section>
 
-The most basic config file looks like this:
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold border-b pb-1">Core Marketing Skills</h2>
+        <ul className="list-disc ml-6 mt-3 space-y-1">
+          <li>Brand Management and Brand Positioning</li>
+          <li>Marketing Strategy and Campaign Planning</li>
+          <li>Digital Marketing (Social Media, Email Marketing, SEO Basics)</li>
+          <li>Content Strategy and Consumer Engagement</li>
+          <li>Market Research and Consumer Insights</li>
+          <li>Competitor and Industry Analysis</li>
+          <li>E-commerce and Quick Commerce Visibility Analysis</li>
+          <li>Influencer and Community Marketing</li>
+          <li>Performance Tracking, KPIs, and ROI Analysis</li>
+          <li>CRM, Marketing Automation, and MarTech Tools</li>
+        </ul>
+      </section>
 
-```js [vite.config.js]
-export default {
-  // config options
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold border-b pb-1">Experience</h2>
+
+        <div className="mt-4">
+          <h3 className="font-semibold">Emami Ltd. – Navratna Brand</h3>
+          <p className="text-sm">Summer Intern – Digital and E-commerce Marketing | Apr 2025 – Jun 2025</p>
+          <ul className="list-disc ml-6 mt-2 space-y-1">
+            <li>Conducted structured research on digital and content marketing trends.</li>
+            <li>Benchmarked brand visibility across Amazon, Flipkart, and Myntra.</li>
+            <li>Supported brand engagement planning through UGC and moment marketing analysis.</li>
+            <li>Contributed to recommendations improving SKU visibility by approximately 15 percent.</li>
+          </ul>
+        </div>
+
+        <div className="mt-4">
+          <h3 className="font-semibold">Anantex</h3>
+          <p className="text-sm">Digital Marketing Executive Intern | Sep 2025 – Present</p>
+          <ul className="list-disc ml-6 mt-2 space-y-1">
+            <li>Executed multi-channel digital campaigns across search, social, email, and affiliates.</li>
+            <li>Ensured brand-consistent messaging across digital touchpoints.</li>
+            <li>Tracked KPIs, dashboards, and ROI metrics for campaign optimization.</li>
+            <li>Supported CRM workflows, marketing automation, and A/B testing.</li>
+          </ul>
+        </div>
+
+        <div className="mt-4">
+          <h3 className="font-semibold">Ability Games Ltd., Kolkata</h3>
+          <p className="text-sm">Operations Executive – Operations and Marketing | Mar 2020 – Jan 2021</p>
+          <ul className="list-disc ml-6 mt-2 space-y-1">
+            <li>Reduced platform downtime incidents by 20 percent through cross-team coordination.</li>
+            <li>Generated operational dashboards to support leadership decision-making.</li>
+            <li>Improved customer resolution time by 10 percent.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold border-b pb-1">Live Projects</h2>
+        <ul className="list-disc ml-6 mt-3 space-y-1">
+          <li>Budge Budge Refineries Ltd. – Brand and Market Research Project</li>
+          <li>Light of Life Trust – Social Impact and Community Engagement Project</li>
+        </ul>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold border-b pb-1">Education</h2>
+        <ul className="list-disc ml-6 mt-3 space-y-1">
+          <li>MBA – Marketing, Universal AI University, Karjat (CGPA: 7.42)</li>
+          <li>B.Sc. Economics Honours, St. Paul’s Cathedral Mission College (CGPA: 6.67)</li>
+        </ul>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold border-b pb-1">Certifications</h2>
+        <ul className="list-disc ml-6 mt-3 space-y-1">
+          <li>AI for Marketing Strategy and Creativity – EdX</li>
+          <li>Excel Skills for Business</li>
+          <li>Digital Marketing Fundamentals</li>
+          <li>Tally and GST</li>
+        </ul>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-semibold border-b pb-1">Leadership and Achievements</h2>
+        <ul className="list-disc ml-6 mt-3 space-y-1">
+          <li>Marketing Head, Wings Community</li>
+          <li>Finalist, Case Blazers Competition</li>
+          <li>Event Host – Corporate HR Networking Event</li>
+          <li>University Cricket Team Member</li>
+        </ul>
+      </section>
+    </main>
+  );
 }
-```
-
-Note Vite supports using ES modules syntax in the config file even if the project is not using native Node ESM, e.g. `"type": "module"` in `package.json`. In this case, the config file is auto pre-processed before load.
-
-You can also explicitly specify a config file to use with the `--config` CLI option (resolved relative to `cwd`):
-
-```bash
-vite --config my-config.js
-```
-
-<ScrimbaLink href="https://scrimba.com/intro-to-vite-c03p6pbbdq/~05jg?via=vite" title="Configuring Vite">Watch an interactive lesson on Scrimba</ScrimbaLink>
-
-::: tip CONFIG LOADING
-By default, Vite uses [Rolldown](https://rolldown.rs/) to bundle the config into a temporary file and load it. This may cause issues when importing TypeScript files in a monorepo. If you encounter any issues with this approach, you can specify `--configLoader runner` to use the [module runner](/guide/api-environment-runtimes.html#modulerunner) instead, which will not create a temporary config and will transform any files on the fly. Note that module runner doesn't support CJS in config files, but external CJS packages should work as usual.
-
-Alternatively, if you're using an environment that supports TypeScript (e.g. `node --experimental-strip-types`), or if you're only writing plain JavaScript, you can specify `--configLoader native` to use the environment's native runtime to load the config file. Note that updates to modules imported by the config file are not detected and hence would not auto-restart the Vite server.
-:::
-
-## Config Intellisense
-
-Since Vite ships with TypeScript typings, you can leverage your IDE's intellisense with jsdoc type hints:
-
-```js
-/** @type {import('vite').UserConfig} */
-export default {
-  // ...
-}
-```
-
-Alternatively, you can use the `defineConfig` helper which should provide intellisense without the need for jsdoc annotations:
-
-```js
-import { defineConfig } from 'vite'
-
-export default defineConfig({
-  // ...
-})
-```
-
-Vite also supports TypeScript config files. You can use `vite.config.ts` with the `defineConfig` helper function above, or with the `satisfies` operator:
-
-```ts
-import type { UserConfig } from 'vite'
-
-export default {
-  // ...
-} satisfies UserConfig
-```
-
-## Conditional Config
-
-If the config needs to conditionally determine options based on the command (`serve` or `build`), the [mode](/guide/env-and-mode#modes) being used, if it's an SSR build (`isSsrBuild`), or is previewing the build (`isPreview`), it can export a function instead:
-
-```js twoslash
-import { defineConfig } from 'vite'
-// ---cut---
-export default defineConfig(({ command, mode, isSsrBuild, isPreview }) => {
-  if (command === 'serve') {
-    return {
-      // dev specific config
-    }
-  } else {
-    // command === 'build'
-    return {
-      // build specific config
-    }
-  }
-})
-```
-
-It is important to note that in Vite's API the `command` value is `serve` during dev (in the cli [`vite`](/guide/cli#vite), `vite dev`, and `vite serve` are aliases), and `build` when building for production ([`vite build`](/guide/cli#vite-build)).
-
-`isSsrBuild` and `isPreview` are additional optional flags to differentiate the kind of `build` and `serve` commands respectively. Some tools that load the Vite config may not support these flags and will pass `undefined` instead. Hence, it's recommended to use explicit comparison against `true` and `false`.
-
-## Async Config
-
-If the config needs to call async functions, it can export an async function instead. And this async function can also be passed through `defineConfig` for improved intellisense support:
-
-```js twoslash
-import { defineConfig } from 'vite'
-// ---cut---
-export default defineConfig(async ({ command, mode }) => {
-  const data = await asyncFunction()
-  return {
-    // vite config
-  }
-})
-```
-
-## Using Environment Variables in Config
-
-Environment variables available while the config itself is being evaluated are only those that already exist in the current process environment (`process.env`). Vite deliberately defers loading any `.env*` files until _after_ the user config has been resolved because the set of files to load depends on config options like [`root`](/guide/#index-html-and-project-root) and [`envDir`](/config/shared-options.md#envdir), and also on the final `mode`.
-
-This means: variables defined in `.env`, `.env.local`, `.env.[mode]`, or `.env.[mode].local` are **not** automatically injected into `process.env` while your `vite.config.*` is running. They _are_ automatically loaded later and exposed to application code via `import.meta.env` (with the default `VITE_` prefix filter) exactly as documented in [Env Variables and Modes](/guide/env-and-mode.html). So if you only need to pass values from `.env*` files to the app, you don't need to call anything in the config.
-
-If, however, values from `.env*` files must influence the config itself (for example to set `server.port`, conditionally enable plugins, or compute `define` replacements), you can load them manually using the exported [`loadEnv`](/guide/api-javascript.html#loadenv) helper.
-
-```js twoslash
-import { defineConfig, loadEnv } from 'vite'
-
-export default defineConfig(({ mode }) => {
-  // Load env file based on `mode` in the current working directory.
-  // Set the third parameter to '' to load all env regardless of the
-  // `VITE_` prefix.
-  const env = loadEnv(mode, process.cwd(), '')
-  return {
-    define: {
-      // Provide an explicit app-level constant derived from an env var.
-      __APP_ENV__: JSON.stringify(env.APP_ENV),
-    },
-    // Example: use an env var to set the dev server port conditionally.
-    server: {
-      port: env.APP_PORT ? Number(env.APP_PORT) : 5173,
-    },
-  }
-})
-```
-
-## Debugging the Config File on VS Code
-
-With the default `--configLoader bundle` behavior, Vite writes the generated temporary configuration file to the `node_modules/.vite-temp` folder and a file not found error will occur when setting breakpoint debugging in the Vite config file. To fix the issue, add the following configuration to `.vscode/settings.json`:
-
-```json
-{
-  "debug.javascript.terminalOptions": {
-    "resolveSourceMapLocations": [
-      "${workspaceFolder}/**",
-      "!**/node_modules/**",
-      "**/node_modules/.vite-temp/**"
-    ]
-  }
-}
-```
